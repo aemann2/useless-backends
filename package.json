@@ -1,9 +1,0 @@
-{
-  "name": "useless-backends",
-  "version": "1.0.0",
-  "description": "A collection of useless backends",
-  "main": "index.js",
-  "author": "Adam Mann",
-  "license": "MIT",
-  "private": false
-}

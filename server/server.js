@@ -27,6 +27,10 @@ db.once('open', () => console.log('connected!'));
 app.use('/items', items);
 app.use('/contacts', contacts);
 
+app.get('', (req, res) => {
+	res.send('Hello from Express');
+});
+
 app.listen(port, () => {
 	console.log(`App listening on port ${port}!`);
 });
