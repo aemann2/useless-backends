@@ -1,9 +1,8 @@
 import { screen, render } from '@testing-library/react';
 import Window from '../Window';
+import testImage from './testImg.png';
 
-describe('test for window component', () => {
-	test('window component grows on hover', () => {});
-	test('window component background color changes on hover', () => {});
+describe('tests for window component', () => {
 	test('window component displays correct input text', () => {
 		const testText = 'This is a test'
 		render(<Window>{testText}</Window>);
@@ -11,6 +10,9 @@ describe('test for window component', () => {
 		expect(text).toBeInTheDocument();
 	});
 	test('window component displays correct image', () => {
-		
+		const altText = 'test image';
+		render(<Window image={testImage} alt={altText}></Window>)
+		const image = screen.getByAltText(altText);
+		expect(image).toBeInTheDocument();
 	})
 });
